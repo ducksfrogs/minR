@@ -1,0 +1,12 @@
+require(ggplot2)
+head(economics)
+cor(economics$pce, economics$psavert)
+
+xPart <- economics$pce - mean(economics$pce)
+yPart <- economics$psavert - mean(economics$psavert)
+nMinousOne <- (nrow(economics) -1)
+xSD <- sd(economics$pce)
+ySD <- sd(economics$psavert)
+sum(xPart *yPart)/(nMinousOne *xSD* ySD)
+cor(economics[, c(2,4:6)])
+head(economics)
