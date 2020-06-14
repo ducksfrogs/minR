@@ -13,3 +13,5 @@ aggregate(tip ~ sex, data = tips, var)
 shapiro.test(tips$tip)
 shapiro.test(tips$tip[tips$sex=="Female"])
 shapiro.test(tips$tip[tips$sex=="Male"])
+ggplot(tips, aes(x=tip, fill=sex)) +
+  geom_histogram(binwidth = .5, alpha=1/2)
