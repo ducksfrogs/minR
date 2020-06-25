@@ -26,3 +26,11 @@ X
 X$Sex <- c("M", "M", "F")
 X
 write.csv(X, "X.csv", quote = FALSE, row.names = FALSE)
+x = rnorm(100)
+hist(x)
+x = rnorm(1000)
+hist(x)
+x = rnorm(100000)
+hist(x)
+hist(x, col = 'gray', main = "Sample Histgram")
+hist(x, col = 'red', main = "Sample Histgram")
