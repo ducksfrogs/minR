@@ -1,0 +1,19 @@
+require(ggplot2)
+head(father.son)
+head(tips)
+require(reshape2)
+data("tips")
+head(tips)
+mean(tips$total_bill)
+tips
+ggplot(diamonds,aes(y = carat, x=1)) + geom_boxplot()
+
+ggplot(diamonds, aes(y= carat, x= cut)) +geom_boxplot()
+ggplot(diamonds, aes(y= carat, x= cut)) +geom_histogram()
+ggplot(diamonds, aes((x=carat))) +geom_histogram() + facet_wrap(~color)
+table(diamonds$color)
+head(diamonds)
+
+ggplot(diamonds, aes((x=carat))) +geom_histogram() + facet_wrap(~clarity)
+g <-ggplot(diamonds, aes(x=carat, y =price))
+g + geom_point(aes(color=color))
