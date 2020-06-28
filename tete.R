@@ -1,4 +1,5 @@
 require(ggplot2)
+install.packages("UsingR")
 head(father.son)
 head(tips)
 require(reshape2)
@@ -16,4 +17,4 @@ head(diamonds)
 
 ggplot(diamonds, aes((x=carat))) +geom_histogram() + facet_wrap(~clarity)
 g <-ggplot(diamonds, aes(x=carat, y =price))
-g + geom_point(aes(color=color))
+g + geom_point(aes(color=color)) + facet_wrap(~color)
