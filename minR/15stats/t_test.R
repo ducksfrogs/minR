@@ -1,11 +1,14 @@
 require(ggplot2)
 install.packages("UsingR")
+library(UsingR)
 head(father.son)
 head(tips)
 require(reshape2)
 data("tips")
 head(tips)
 mean(tips$total_bill)
+t.test(tips$tip, alternative = 'two.sided', mu=2.5)
+t.test(tips$tip, alternative = 'two.sided', mu=3.2)
 tips
 ggplot(diamonds,aes(y = carat, x=1)) + geom_boxplot()
 
