@@ -28,7 +28,7 @@ X
 write.csv(X, "X.csv", quote = FALSE, row.names = FALSE)
 x = rnorm(100)
 hist(x)
-x = rnorm(1000)
+ x = rnorm(1000)
 hist(x)
 x = rnorm(100000)
 hist(x)
