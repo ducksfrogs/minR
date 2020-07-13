@@ -18,3 +18,8 @@ binom.test(1, 10, 0.5)
 p <- sapply(0:10, function(x) binom.test(x, 10, 0.5)$p.value)
 q = dbinom(0:10, 10, 0.5)
 sum(q[p<0.05])
+
+x = (0:100)/100
+
+y = sapply(x, function(t) binom.test(4, 10, t)$p.value)
+plot(x,y,pch=16)
