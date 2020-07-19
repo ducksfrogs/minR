@@ -1,0 +1,8 @@
+install.packages('mixtools')
+library(mixtools)
+d <- c(rnorm(100,20,5),rnorm(30,40,5),rnorm(70,60,10))
+fit <- normalmixEM(d, k=3)
+hist(d, freq = F, breaks = 20)
+g <- function(x,k) fit$lambda[k] * dnorm(x, fit$mu[k], fit$sigma[k])
+f <- function(x) g(x,1) + g(x,2) + g(x,3)
+plot(f, 0,100, lwd=3, col=4, add=T)
